@@ -26,7 +26,9 @@ const Services = () => {
                     </ServicesCard>)
                 }
             </div>
-            
+         <div className='text-center'>
+         <Link to="/places" className='mt-20  btn btn-secondary btn-outline text-black text-xl font-bold'>More Service</Link>
+         </div>
         </div>
     );
 };
