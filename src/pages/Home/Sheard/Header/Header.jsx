@@ -11,10 +11,11 @@ const Header = () => {
                 <div className="flex-none">
                     <ul className="menu menu-horizontal px-1 text-xl">
                         <li><Link to='/'>Home</Link></li>
-                        <li> <Link to='/places'>Places</Link></li>
-                        <li><Link>About us</Link></li>
+                        <li><Link to='/about'>About us</Link></li>
                         <li><Link>Contact</Link></li>
-                        <li><Link>Gallery</Link></li>
+                        <li> <Link to='/places'>Places</Link></li>
+                        <li><Link to='/gallry'>Gallery</Link></li>
+                        <li><Link>Review</Link></li>
 
                     </ul>
                 </div>
