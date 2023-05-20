@@ -5,7 +5,7 @@ import './banner.css'
 const Bannare = () => {
     return (
         <div>
-            <div className="carousel w-full">
+            <div className="carousel w-full mt-8">
                 <div id="slide1" className="carousel-item relative w-full">
                     <div className='carousel-img'>
                         <img src={banner} alt="" className="w-full" />

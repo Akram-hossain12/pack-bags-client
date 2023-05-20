@@ -1,11 +1,15 @@
 import React from 'react';
 import photo from '../../../asetss/istockphoto-1434742171-170667a.jpg'
+import Header from '../Sheard/Header/Header';
+import Footer from '../Sheard/Footer/Footer';
+import useTitle from '../../../hooks/useTitle';
 
 
 const About = () => {
+    useTitle("About")
     return (
         <div className='mb-20'>
-
+           <Header></Header>
             <h1 className='text-center text-5xl font-bold mb-8'>Who we are?</h1>
             <div className="card card-side w-[1000px] mx-auto bg-stone-300 shadow-xl">
                 <figure><img className='ml-12 rounded-md' src={photo} alt="Movie" /></figure>
@@ -17,6 +21,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
+            
         </div>
     );
 };

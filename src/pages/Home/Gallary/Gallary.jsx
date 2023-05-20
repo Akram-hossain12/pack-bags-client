@@ -9,12 +9,17 @@ import photo5 from '../../../asetss/gallary/photo5.jpg';
 import photo6 from '../../../asetss/gallary/photo6.jpg';
 import photo7 from '../../../asetss/gallary/photo7.jpg';
 import photo8 from '../../../asetss/gallary/photo8.jpg';
+import Header from '../Sheard/Header/Header';
+import Footer from '../Sheard/Footer/Footer';
+import useTitle from '../../../hooks/useTitle';
 
 
 const Gallary = () => {
+    useTitle("Gallary")
     return (
-        <div >
-            <h1 className='text-3xl font-bold text-center my-14'>Tour Gallary</h1>
+        <div>
+            <Header></Header>
+            <h1 className='text-3xl font-bold text-center my-14  mt-20'>Tour Gallary</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-10'>
                 <PhotoProvider>
                     <PhotoView src={photo1}>
@@ -61,6 +66,7 @@ const Gallary = () => {
                 </PhotoProvider>
 
             </div>
+         
         </div>
     );
 };

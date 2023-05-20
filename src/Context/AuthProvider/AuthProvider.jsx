@@ -6,13 +6,30 @@ import app from '../../firebase/firebase.config';
 export const AuthContext =createContext();
 const auth = getAuth(app)
 
-
+const provider = new GoogleAuthProvider();
 const AuthProvider = ({children}) => {
     
 const [user ,setUser]=useState(null);
-const [loading,setLoading]=useState(null)
+const [loading,setLoading]=useState(false)
 
+const sginupAuth=(email,password)=>{
+ setLoading(true)
+    return createUserWithEmailAndPassword(auth,email,password)
+}
+const googleAuth=()=>{
+    setLoading(true)
+    return signInWithPopup(auth,provider)
+}
 
+const loginAuth=(email,password)=>{
+    setLoading(true)
+    return signInWithEmailAndPassword(auth,email,password)
+}
+
+const logoutAuth=()=>{
+    setLoading(true)
+    return signOut(auth)
+}
 
 
 useEffect( () =>{
@@ -28,7 +45,12 @@ useEffect( () =>{
 }, [])
 
 const authInfo={
-
+  loading,
+    user,
+    logoutAuth,
+    loginAuth,
+    sginupAuth,
+    googleAuth
 }
 
     return (

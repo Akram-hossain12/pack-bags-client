@@ -4,6 +4,11 @@ import Home from "../../pages/Home/Home/Home";
 import Services from "../../pages/Services/Services";
 import Places from "../../pages/Places/Places";
 import About from "../../pages/Home/About/About";
+import Login from "../../pages/Login/Login";
+import SginUp from "../../pages/SginUp/SginUp";
+import Gallary from "../../pages/Home/Gallary/Gallary";
+import PrivateRoute from "../PrivetRoute/PrivateRoute";
+import Review from "../../pages/Reviwe/Review";
 
 const router = createBrowserRouter([
 
@@ -21,12 +26,27 @@ const router = createBrowserRouter([
           },
           {
             path:"/places",
-            
-            element:<Places></Places>
+            element:<PrivateRoute><Places></Places></PrivateRoute>
           },
           {
             path:"/about",
             element:<About></About>
+          },
+          {
+            path:'/sginup',
+            element:<SginUp></SginUp>
+          },
+          {
+            path:'/login',
+            element:<Login></Login>
+          },
+          {
+            path:'/gallary',
+            element:<Gallary></Gallary>
+          },
+          {
+            path:"/reviwe",
+            element:<Review></Review>
           }
         ]
     }
