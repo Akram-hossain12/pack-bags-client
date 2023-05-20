@@ -18,10 +18,12 @@ const Header = () => {
                         <Link to='/' className="btn btn-ghost normal-case text-3xl">PACK BAGS .traveler</Link>
                     </div>
                     <div className="flex-none">
-                        <ul className="menu menu-horizontal px-1 text-xl">
+                        <ul className="menu menu-horizontal px-1">
                             <li><Link to='/'>Home</Link></li>
                             <li><Link to='/about'>About us</Link></li>
-                            <li><Link>Contact</Link></li>
+                            <li><Link to='/contact'>Contact</Link></li>
+                            <li><Link to='/blogger'>Blogger</Link></li>
+
                             {
                                 user?.email ?
                                     <>

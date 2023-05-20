@@ -9,6 +9,8 @@ import SginUp from "../../pages/SginUp/SginUp";
 import Gallary from "../../pages/Home/Gallary/Gallary";
 import PrivateRoute from "../PrivetRoute/PrivateRoute";
 import Review from "../../pages/Reviwe/Review";
+import ContactUs from "../../pages/Home/ContactUs/ContactUs";
+import Blogger from "../../pages/Blogeer/Blogger";
 
 const router = createBrowserRouter([
 
@@ -47,6 +49,14 @@ const router = createBrowserRouter([
           {
             path:"/reviwe",
             element:<Review></Review>
+          },
+          {
+            path:'/contact',
+            element:<ContactUs></ContactUs>
+          },
+          {
+            path:'/blogger',
+            element:<Blogger></Blogger>
           }
         ]
     }
