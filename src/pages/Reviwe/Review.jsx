@@ -22,7 +22,7 @@ const Review = () => {
             profassion:profassion
 
         }
-        fetch('http://localhost:5001/reviewes', {
+        fetch('https://pack-bags-server-akram-hossain12.vercel.app/reviewes', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

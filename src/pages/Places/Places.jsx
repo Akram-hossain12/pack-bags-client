@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../Home/Sheard/Header/Header';
-import Bannare from '../Home/Bannere/Bannare';
+
 import PlacesesCard from './PlacesesCard';
 import useTitle from '../../hooks/useTitle';
 
@@ -10,7 +10,7 @@ const Places = () => {
     useTitle("Services")
 
     useEffect(() => {
-        fetch("http://localhost:5001/allServices")
+        fetch("https://pack-bags-server-akram-hossain12.vercel.app/allServices")
             .then(res => res.json())
             .then(data => {
                 setPlaces(data)
